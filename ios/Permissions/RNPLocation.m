@@ -33,7 +33,12 @@ NSString *const EscalatedServiceRequested = @"RNP_ESCALATED_PERMISSION_REQUESTED
         case kCLAuthorizationStatusAuthorizedAlways:
             return RNPStatusAuthorized;
         case kCLAuthorizationStatusAuthorizedWhenInUse:
-            return [type isEqualToString:@"always"] ? RNPStatusDenied : RNPStatusAuthorized;
+            if([type isEqualToString:@"always"]) {
+                NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+                NSString * hasEscalated = [defaults stringForKey:EscalatedServiceRequested];
+                return hasEscalated == nil ? RNPStatusUndetermined : RNPStatusDenied;
+            }
+            return RNPStatusAuthorized;
         case kCLAuthorizationStatusDenied:
             return RNPStatusDenied;
         case kCLAuthorizationStatusRestricted:
@@ -53,7 +58,7 @@ NSString *const EscalatedServiceRequested = @"RNP_ESCALATED_PERMISSION_REQUESTED
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         NSString * hasEscalated = [defaults stringForKey:EscalatedServiceRequested];
         self.escelatedRightsRequested = [NSNumber numberWithBool: hasEscalated == nil ? NO : YES];
-
+        
     }
     return self;
 }
@@ -69,14 +74,15 @@ NSString *const EscalatedServiceRequested = @"RNP_ESCALATED_PERMISSION_REQUESTED
         
         if ([type isEqualToString:@"always"]) {
             // Save the info about the 'always use' request we are about to make
-            NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-            [defaults setObject:@"YES" forKey:EscalatedServiceRequested];
-            [defaults synchronize];
-            self.escelatedRightsRequested = [NSNumber numberWithBool:YES];
             
             [self.locationManager requestAlwaysAuthorization];
             
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 10 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 30 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+                NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+                [defaults setObject:@"YES" forKey:EscalatedServiceRequested];
+                [defaults synchronize];
+                self.escelatedRightsRequested = [NSNumber numberWithBool:YES];
+                
                 if(self.completionHandler){
                     self.completionHandler(RNPStatusDenied);
                     self.completionHandler = nil;
