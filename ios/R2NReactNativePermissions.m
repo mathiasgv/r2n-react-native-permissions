@@ -8,7 +8,7 @@
 
 @import Contacts;
 
-#import "ReactNativePermissions.h"
+#import "R2NReactNativePermissions.h"
 
 #if __has_include(<React/RCTBridge.h>)
   #import <React/RCTBridge.h>
@@ -47,13 +47,13 @@
 #import "RNPMotion.h"
 
 
-@interface ReactNativePermissions()
+@interface R2NReactNativePermissions()
 @property (strong, nonatomic) RNPLocation *locationMgr;
 @property (strong, nonatomic) RNPNotification *notificationMgr;
 @property (strong, nonatomic) RNPBluetooth *bluetoothMgr;
 @end
 
-@implementation ReactNativePermissions
+@implementation R2NReactNativePermissions
 
 
 RCT_EXPORT_MODULE();

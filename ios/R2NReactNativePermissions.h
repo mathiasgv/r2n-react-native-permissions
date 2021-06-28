@@ -14,6 +14,6 @@
   #import "RCTBridgeModule.h"
 #endif
 
-@interface ReactNativePermissions : NSObject <RCTBridgeModule>
+@interface R2NReactNativePermissions : NSObject <RCTBridgeModule>
 
 @end
