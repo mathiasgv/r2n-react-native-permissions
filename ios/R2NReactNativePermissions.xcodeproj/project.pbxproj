@@ -10,7 +10,7 @@
 		488FE29C200BC8A100E05AB0 /* RNPMediaLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 488FE29B200BC8A100E05AB0 /* RNPMediaLibrary.m */; };
 		488FE2A2200BCED100E05AB0 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 488FE2A1200BCEC900E05AB0 /* MediaPlayer.framework */; };
 		669581F71FE4416B008596CD /* RCTConvert+RNPStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 669581F41FE4416B008596CD /* RCTConvert+RNPStatus.m */; };
-		669581F81FE4416B008596CD /* ReactNativePermissions.m in Sources */ = {isa = PBXBuildFile; fileRef = 669581F51FE4416B008596CD /* ReactNativePermissions.m */; };
+		669581F81FE4416B008596CD /* R2NReactNativePermissions.m in Sources */ = {isa = PBXBuildFile; fileRef = 669581F51FE4416B008596CD /* R2NReactNativePermissions.m */; };
 		6695820D1FE441A8008596CD /* RNPSpeechRecognition.m in Sources */ = {isa = PBXBuildFile; fileRef = 669581FD1FE441A7008596CD /* RNPSpeechRecognition.m */; };
 		6695820E1FE441A8008596CD /* RNPLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 669581FE1FE441A7008596CD /* RNPLocation.m */; };
 		6695820F1FE441A8008596CD /* RNPBluetooth.m in Sources */ = {isa = PBXBuildFile; fileRef = 669581FF1FE441A7008596CD /* RNPBluetooth.m */; };
@@ -39,9 +39,9 @@
 		488FE29B200BC8A100E05AB0 /* RNPMediaLibrary.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNPMediaLibrary.m; sourceTree = "<group>"; };
 		488FE29D200BC8D200E05AB0 /* RNPMediaLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNPMediaLibrary.h; sourceTree = "<group>"; };
 		488FE2A1200BCEC900E05AB0 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
-		669581F31FE4416B008596CD /* ReactNativePermissions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReactNativePermissions.h; sourceTree = "<group>"; };
+		669581F31FE4416B008596CD /* R2NReactNativePermissions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = R2NReactNativePermissions.h; sourceTree = "<group>"; };
 		669581F41FE4416B008596CD /* RCTConvert+RNPStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RCTConvert+RNPStatus.m"; sourceTree = "<group>"; };
-		669581F51FE4416B008596CD /* ReactNativePermissions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReactNativePermissions.m; sourceTree = "<group>"; };
+		669581F51FE4416B008596CD /* R2NReactNativePermissions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = R2NReactNativePermissions.m; sourceTree = "<group>"; };
 		669581F61FE4416B008596CD /* RCTConvert+RNPStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RCTConvert+RNPStatus.h"; sourceTree = "<group>"; };
 		669581FB1FE441A7008596CD /* RNPContacts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNPContacts.h; sourceTree = "<group>"; };
 		669581FC1FE441A7008596CD /* RNPPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNPPhoto.h; sourceTree = "<group>"; };
@@ -61,7 +61,7 @@
 		6695820A1FE441A8008596CD /* RNPEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNPEvent.m; sourceTree = "<group>"; };
 		6695820B1FE441A8008596CD /* RNPSpeechRecognition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNPSpeechRecognition.h; sourceTree = "<group>"; };
 		6695820C1FE441A8008596CD /* RNPNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNPNotification.h; sourceTree = "<group>"; };
-		9D23B34F1C767B80008B4819 /* libReactNativePermissions.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libReactNativePermissions.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D23B34F1C767B80008B4819 /* libR2NReactNativePermissions.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libR2NReactNativePermissions.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0AD62302000656F00D89898 /* RNPMotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNPMotion.h; sourceTree = "<group>"; };
 		D0AD62312000657000D89898 /* RNPMotion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNPMotion.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -121,8 +121,8 @@
 				669581FA1FE44191008596CD /* Permissions */,
 				669581F61FE4416B008596CD /* RCTConvert+RNPStatus.h */,
 				669581F41FE4416B008596CD /* RCTConvert+RNPStatus.m */,
-				669581F31FE4416B008596CD /* ReactNativePermissions.h */,
-				669581F51FE4416B008596CD /* ReactNativePermissions.m */,
+				669581F31FE4416B008596CD /* R2NReactNativePermissions.h */,
+				669581F51FE4416B008596CD /* R2NReactNativePermissions.m */,
 				9D23B3501C767B80008B4819 /* Products */,
 				488FE2A0200BCEC900E05AB0 /* Frameworks */,
 			);
@@ -131,7 +131,7 @@
 		9D23B3501C767B80008B4819 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9D23B34F1C767B80008B4819 /* libReactNativePermissions.a */,
+				9D23B34F1C767B80008B4819 /* libR2NReactNativePermissions.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -139,9 +139,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9D23B34E1C767B80008B4819 /* ReactNativePermissions */ = {
+		9D23B34E1C767B80008B4819 /* R2NReactNativePermissions */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9D23B3581C767B80008B4819 /* Build configuration list for PBXNativeTarget "ReactNativePermissions" */;
+			buildConfigurationList = 9D23B3581C767B80008B4819 /* Build configuration list for PBXNativeTarget "R2NReactNativePermissions" */;
 			buildPhases = (
 				9D23B34B1C767B80008B4819 /* Sources */,
 				9D23B34C1C767B80008B4819 /* Frameworks */,
@@ -151,9 +151,9 @@
 			);
 			dependencies = (
 			);
-			name = ReactNativePermissions;
-			productName = ReactNativePermissions;
-			productReference = 9D23B34F1C767B80008B4819 /* libReactNativePermissions.a */;
+			name = R2NReactNativePermissions;
+			productName = R2NReactNativePermissions;
+			productReference = 9D23B34F1C767B80008B4819 /* libR2NReactNativePermissions.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -170,7 +170,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9D23B34A1C767B80008B4819 /* Build configuration list for PBXProject "ReactNativePermissions" */;
+			buildConfigurationList = 9D23B34A1C767B80008B4819 /* Build configuration list for PBXProject "R2NReactNativePermissions" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -182,7 +182,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9D23B34E1C767B80008B4819 /* ReactNativePermissions */,
+				9D23B34E1C767B80008B4819 /* R2NReactNativePermissions */,
 			);
 		};
 /* End PBXProject section */
@@ -203,7 +203,7 @@
 				6695820D1FE441A8008596CD /* RNPSpeechRecognition.m in Sources */,
 				669582131FE441A8008596CD /* RNPAudioVideo.m in Sources */,
 				D0AD62322000657000D89898 /* RNPMotion.m in Sources */,
-				669581F81FE4416B008596CD /* ReactNativePermissions.m in Sources */,
+				669581F81FE4416B008596CD /* R2NReactNativePermissions.m in Sources */,
 				669582121FE441A8008596CD /* RNPPhoto.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,7 +324,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9D23B34A1C767B80008B4819 /* Build configuration list for PBXProject "ReactNativePermissions" */ = {
+		9D23B34A1C767B80008B4819 /* Build configuration list for PBXProject "R2NReactNativePermissions" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9D23B3561C767B80008B4819 /* Debug */,
@@ -333,7 +333,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9D23B3581C767B80008B4819 /* Build configuration list for PBXNativeTarget "ReactNativePermissions" */ = {
+		9D23B3581C767B80008B4819 /* Build configuration list for PBXNativeTarget "R2NReactNativePermissions" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9D23B3591C767B80008B4819 /* Debug */,
